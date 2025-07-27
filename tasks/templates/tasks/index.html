@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taskstle>
-</head>
-<body>
+
+
+
+
+{% extends "tasks/layout.html" %}
+{% block body %}
+    <h1>Tasks for the day</h1>
     <ul>
         {% for task in tasks %}
             <li>{{ task }}</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+<!-- This special template in line 14 works instead of the regular linking tag in html because django recognizes the name we gave the path in the urls.py -->
+    <a href="{% url 'tasks:add' %}">Add a new Task</a>
+    {% endblock %}
