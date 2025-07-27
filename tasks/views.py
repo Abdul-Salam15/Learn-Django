@@ -26,4 +26,4 @@ def add (request):
 #If the request is GET
     return render(request, "tasks/add.html",{
         "form": NewTaskForm()
-     })
+     }) 
