@@ -8,6 +8,8 @@
     <ul>
         {% for task in tasks %}
             <li>{{ task }}</li>
+        {% empty %}
+            <li>No Task :), Add your tasks.</li>
         {% endfor %}
     </ul>
 <!-- This special template in line 14 works instead of the regular linking tag in html because django recognizes the name we gave the path in the urls.py -->
